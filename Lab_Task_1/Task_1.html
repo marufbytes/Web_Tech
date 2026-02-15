@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        Lab Task 01
+    </title>
+</head>
+
+<body>
+
+    <form>
+        <h1>University Admission Form</h1>
+        <fieldset>
+            <legend>Personal Information</legend>
+
+            <table>
+                <tr>
+                    <td>First Nmae: </td>
+                    <td><input type="text" required maxlength="10"></td>     <!-- Name, email,Phone are required -->
+                </tr>
+                <tr>
+                    <td>Last Name: </td>
+                    <td><input type="text" required maxlength="10"></td>     <!-- Firsr & last name has highest 10 character fro each -->
+                </tr>
+                <tr>
+                    <td>Phone: </td>
+                    <td><input type="number" required></td>
+                </tr>
+                <tr>
+                    <td>Email: </td>
+                    <td><input type="email" required></td>
+                </tr>
+                <tr>
+                    <td>Gender: </td>
+                    <td><input type="radio" name="gender" value="m">Male</td>
+                    <td><input type="radio" name="gender" value="f">Female</td>
+                </tr>
+                <tr>
+                    <td>Interest: </td>
+                    <td>
+                        <input type="checkbox" value="web">Web Tech
+                        <input type="checkbox" value="Software">Software
+                    </td>
+                </tr>
+                <tr>
+                    <td>Select Course: </td>
+                    <td>
+                        <select name="course" id="course">
+                            <option value="Web Tech">CSE</option>
+                            <option value="Software">EEE</option>
+                            <option value="RM">Architechture</option>
+                            <option value="Micro">BBA</option>
+                            <option value="mmc">MMC</option>
+                            <option value="pharmacy">Pharmacy</option>
+                            <option value="date">Data Science</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Submission Date: </td>
+                    <td><input type="date"></td>
+                </tr>
+                <tr>
+                    <td>Upload File: </td>
+                    <td><input type="file"></td>
+                </tr>
+
+            </table>
+        </fieldset>
+
+        <fieldset>
+            <legend>Academic Information</legend>
+            <table>
+                <tr>
+                    <td>College Name: </td>
+                    <td><input type="text"></td>
+                </tr>
+                <tr>
+                    <td>SSC Passing Year: </td>
+                    <td><input type="number"></td>
+                </tr>
+                <tr>
+                    <td>SSC GPA: </td>
+                    <td><input type="number"></td>
+                </tr>
+                <tr>
+                    <td>Academic Transcript(SSC): </td>
+                    <td><input type="file"></td>
+                </tr>
+                <tr>
+                    <td>School Name: </td>
+                    <td><input type="text"></td>
+                </tr>
+                <tr>
+                    <td>HSC Passing Year: </td>
+                    <td><input type="number"></td>
+                </tr>
+                <tr>
+                    <td>HSC GPA: </td>
+                    <td><input type="number"></td>
+                </tr>
+                <tr>
+                    <td>Academic Transcript(HSC): </td>
+                    <td><input type="file"></td>
+                </tr>
+
+            </table>
+
+        </fieldset>
+
+        <tr>
+            <td><input type="reset"></td>
+        </tr>
+
+        <tr>
+            <td><input type="submit"></td>
+        </tr>
+
+    </form>
+</body>
+
+</html>
