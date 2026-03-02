@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Maruf Bhai">
+    <meta name="description" content="Compact practice page for Web Technologies labs">
+    <title>WebTech Practice</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Header & Nav -->
+<header class="sticky-header">
+    <h1>Maruf Bhai Portfolio</h1>
+    <nav>
+        <ul>
+            <li><a href="#profile">Profile</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#products">Products</a></li>
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#news">News</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- Student Profile -->
+<section id="profile" class="profile-card">
+    <div class="badge">Online</div>
+    <img src="student-photo.jpg" alt="Student Photo">
+    <h2>Maruf Bhai</h2>
+    <p>CS Department | Student ID: CS12345</p>
+    <p class="bio">Passionate about web development and front-end design.</p>
+</section>
+
+<!-- About Me -->
+<section id="about" class="about-section">
+    <div class="about-me">
+        <h2>About Me</h2>
+        <p style="color:blue;">I love coding and learning new web technologies.</p>
+    </div>
+    <div class="education">
+        <h2>Education</h2>
+        <table>
+            <tr><th>Degree</th><th>Year</th><th>Institution</th></tr>
+            <tr><td>BSc in CS</td><td>2025</td><td>AIUB</td></tr>
+        </table>
+    </div>
+    <div class="hobbies">
+        <h2>Hobbies</h2>
+        <ul>
+            <li>Coding</li>
+            <li>Reading</li>
+            <li>Gaming</li>
+        </ul>
+    </div>
+</section>
+
+<!-- Products -->
+<section id="products" class="product-cards">
+    <h2>Products</h2>
+    <div class="card">
+        <img src="laptop.jpg" alt="Laptop">
+        <h3>Laptop Pro</h3>
+        <p>High performance laptop, 16GB RAM, 512GB SSD.</p>
+        <p>$1200</p>
+        <a href="#">Buy Now</a>
+    </div>
+    <div class="card">
+        <img src="headphones.jpg" alt="Headphones">
+        <h3>Headphones X</h3>
+        <p>Wireless, noise-cancelling headphones.</p>
+        <p>$150</p>
+        <a href="#">Buy Now</a>
+    </div>
+    <div class="card">
+        <img src="smartwatch.jpg" alt="Smartwatch">
+        <h3>Smartwatch</h3>
+        <p>Track fitness and notifications on the go.</p>
+        <p>$200</p>
+        <a href="#">Buy Now</a>
+    </div>
+</section>
+
+<!-- Restaurant Menu -->
+<section id="menu">
+    <h2>Restaurant Menu</h2>
+    <h3 id="starters">Starters</h3>
+    <ul>
+        <li><strong>Spring Rolls</strong> - Crispy rolls $5</li>
+        <li><strong>Soup</strong> - Daily special $4</li>
+    </ul>
+    <h3 id="drinks">Drinks</h3>
+    <ul>
+        <li><strong>Lemonade</strong> - Fresh $2</li>
+        <li><strong>Tea</strong> - Hot & soothing $1</li>
+    </ul>
+</section>
+
+<!-- News -->
+<section id="news" class="news-section">
+    <h2>Latest News</h2>
+    <article>
+        <h3>CS Department Workshop</h3>
+        <small>March 3, 2026</small>
+        <p>Students participated in a web development workshop.</p>
+    </article>
+    <article>
+        <h3>AIUB Hackathon</h3>
+        <small>March 2, 2026</small>
+        <p>Teams competed in innovative projects and coding challenges.</p>
+    </article>
+    <aside class="sidebar">
+        <h3>Top Headlines</h3>
+        <ul>
+            <li>Exam schedule released</li>
+            <li>New lab openings</li>
+        </ul>
+    </aside>
+</section>
+
+<!-- Overflow & Z-index -->
+<section class="demo-section">
+    <h2>Overflow Box</h2>
+    <div class="overflow-box">
+        <p>Very long text that will test overflow behavior in CSS. Lorem ipsum dolor sit amet...</p>
+    </div>
+    <h2>Layered Boxes (z-index)</h2>
+    <div class="layer red">Box 1</div>
+    <div class="layer blue">Box 2</div>
+    <div class="layer green">Box 3</div>
+</section>
+
+<!-- Contact Form -->
+<section id="contact">
+    <h2>Contact Me</h2>
+    <form>
+        <fieldset>
+            <legend>Personal Info</legend>
+            <label>Name: <input type="text" required></label><br>
+            <label>Email: <input type="email" required></label><br>
+            <label>Gender:
+                <input type="radio" name="gender"> Male
+                <input type="radio" name="gender"> Female
+            </label>
+        </fieldset>
+        <fieldset>
+            <legend>Preferences</legend>
+            <label>Interests:
+                <input type="checkbox"> Coding
+                <input type="checkbox"> Design
+            </label><br>
+            <label>Course: 
+                <select>
+                    <option>Web Development</option>
+                    <option>AI</option>
+                </select>
+            </label><br>
+            <label>Date of Visit: <input type="date"></label>
+        </fieldset>
+        <input type="submit" value="Submit">
+        <input type="reset" value="Reset">
+    </form>
+</section>
+
+<!-- Fixed Contact Widget -->
+<div class="contact-widget">
+    Contact Us:<br> +880123456 <br> <a href="mailto:test@example.com">Email</a>
+</div>
+
+<!-- Footer -->
+<footer>
+    <p>© 2026 Maruf Bhai | WebTech Practice | All Rights Reserved</p>
+    <a href="#top">Back to Top</a>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,23 @@
+body {font-family: Arial; margin:0; padding:0;}
+.sticky-header {position: sticky; top:0; background:#333; color:#fff; padding:10px;}
+.sticky-header ul {list-style:none; margin:0; padding:0; display:flex; justify-content:center;}
+.sticky-header li {margin:0 10px;} 
+.sticky-header a {color:#fff; text-decoration:none; padding:5px;}
+.sticky-header a:hover {background:#555; border-radius:5px;}
+.profile-card {width:300px; margin:20px auto; padding:15px; border:2px solid #ccc; border-radius:10px; background:#e0f7fa; position:relative; text-align:center;}
+.profile-card img {width:150px; border-radius:50%;}
+.badge {position:absolute; top:10px; right:10px; background:red; color:#fff; padding:2px 8px; border-radius:5px;}
+.about-section > div {background:#f0f0f0; margin:10px; padding:10px; border-radius:5px;}
+.product-cards {display:flex; justify-content:center; margin:20px 0;}
+.product-cards .card {border:1px solid #ccc; padding:10px; margin:0 10px; text-align:center; width:150px; transition:0.3s;}
+.product-cards .card:hover {outline:2px solid blue; outline-offset:5px;}
+.news-section {display:flex;}
+.news-section article {flex:2; margin:10px; padding:10px; border:1px solid #ccc;}
+.news-section .sidebar {flex:1; margin:10px; padding:10px; border:1px dashed #333;}
+.overflow-box {width:300px; height:100px; border:1px solid #000; overflow:auto; margin:10px; padding:5px;}
+.layer {width:100px; height:50px; position:absolute; color:#fff; text-align:center; line-height:50px; font-weight:bold;}
+.red {background:red; top:0; left:0; z-index:1;}
+.blue {background:blue; top:20px; left:20px; z-index:2;}
+.green {background:green; top:40px; left:40px; z-index:3;}
+.contact-widget {position:fixed; bottom:10px; right:10px; padding:10px; background:#ff0; border:1px solid #000; z-index:100;}
+footer {background:#333; color:#fff; text-align:center; padding:10px; margin-top:20px;}
