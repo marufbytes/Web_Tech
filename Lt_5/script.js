@@ -2,16 +2,13 @@ function analyzeText() {
 
     var text = document.getElementById("inputText").value;
 
-    // Check empty input
     if (text === "") {
         document.getElementById("result").innerHTML = "Please enter some text.";
         return;
     }
 
-    // Character count
     var charCount = text.length;
 
-    // Word count (simple split + loop)
     var wordsArray = text.split(" ");
     var wordCount = 0;
 
