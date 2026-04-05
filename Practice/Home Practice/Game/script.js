@@ -1,83 +1,74 @@
-const cells = document.querySelectorAll(".cell");
-const statusText = document.getElementById("status");
-const resetBtn = document.getElementById("resetBtn");
-
-let currentPlayer = "X";
-let gameActive = true;
 let board = ["", "", "", "", "", "", "", "", ""];
+let turn = "X";
+let gameOver = false;
 
-const winConditions = [
-  [0, 1, 2],
-  [3, 4, 5],
-  [6, 7, 8],
-  [0, 3, 6],
-  [1, 4, 7],
-  [2, 5, 8],
-  [0, 4, 8],
-  [2, 4, 6]
+const cells = document.getElementsByTagName("td");
+const statusText = document.getElementById("status");
+const resetBtn = document.getElementById("reset");
+
+const winCombos = [
+  [0,1,2],[3,4,5],[6,7,8],
+  [0,3,6],[1,4,7],[2,5,8],
+  [0,4,8],[2,4,6]
 ];
 
-cells.forEach((cell, index) => {
-  cell.addEventListener("click", () => handleCellClick(cell, index));
-});
-
-function handleCellClick(cell, index) {
-  if (board[index] !== "" || !gameActive) {
-    return;
-  }
-
-  board[index] = currentPlayer;
-  cell.textContent = currentPlayer;
-
-  checkResult();
+// Add click listeners to each cell
+for (let i = 0; i < cells.length; i++) {
+  cells[i].addEventListener("click", function () {
+    playMove(this, i);
+  });
 }
 
-function checkResult() {
-  let won = false;
+function playMove(cell, index) {
+  if (board[index] === "" && gameOver === false) {
+    board[index] = turn;
+    cell.textContent = turn;
 
-  for (let condition of winConditions) {
-    const [a, b, c] = condition;
+    checkWinner();
 
-    if (
-      board[a] &&
-      board[a] === board[b] &&
-      board[a] === board[c]
-    ) {
-      won = true;
-      cells[a].classList.add("winner");
-      cells[b].classList.add("winner");
-      cells[c].classList.add("winner");
-      break;
+    if (!gameOver) {
+      turn = (turn === "X") ? "O" : "X";
+      statusText.textContent = "Current Turn: " + turn;
+    }
+  }
+}
+
+function checkWinner() {
+
+  for (let i = 0; i < winCombos.length; i++) {
+    let a = winCombos[i][0];
+    let b = winCombos[i][1];
+    let c = winCombos[i][2];
+
+    if (board[a] !== "" && board[a] === board[b] && board[b] === board[c]) {
+      statusText.textContent = "Player " + board[a] + " wins!";
+      gameOver = true;
+      return;
     }
   }
 
-  if (won) {
-    statusText.textContent = `Player ${currentPlayer} wins!`;
-    gameActive = false;
-    return;
+  // Check draw
+  let draw = true;
+  for (let i = 0; i < board.length; i++) {
+    if (board[i] === "") {
+      draw = false;
+    }
   }
 
-  if (!board.includes("")) {
+  if (draw) {
     statusText.textContent = "It's a draw!";
-    gameActive = false;
-    return;
+    gameOver = true;
   }
-
-  currentPlayer = currentPlayer === "X" ? "O" : "X";
-  statusText.textContent = `Current Player: ${currentPlayer}`;
 }
 
-resetBtn.addEventListener("click", resetGame);
-
-function resetGame() {
-  currentPlayer = "X";
-  gameActive = true;
+// Reset game
+resetBtn.addEventListener("click", function () {
   board = ["", "", "", "", "", "", "", "", ""];
+  turn = "X";
+  gameOver = false;
+  statusText.textContent = "Current Turn: X";
 
-  statusText.textContent = "Current Player: X";
-
-  cells.forEach(cell => {
-    cell.textContent = "";
-    cell.classList.remove("winner");
-  });
-}
+  for (let i = 0; i < cells.length; i++) {
+    cells[i].textContent = "";
+  }
+});
