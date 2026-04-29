@@ -3,10 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Form Validation</title>
-
-    <style>
-        body {
+    <title>Form validation</title>
+     <style>
+         body {
             font-family: Arial, sans-serif;
             margin: 50px;
         }
@@ -26,48 +25,30 @@
         label {
             font-weight: bold;
         }
-    </style>
+     </style>
 </head>
 <body>
-    <h2>Registration Form</h2>
-    
+
+    <h2>Registration Form Php validation</h2>
+
     <?php
-    $name = $age =$email = $password =$phone = "";
+    $name=$age=$email=$password=$phone= "";
     $nameErr=$ageErr=$emailErr=$passwordErr=$phoneErr="";
     $success="";
 
-    if(empty($_POST["name"])){
-        $nameErr="Name is required";
+    if($_SERVER["REQUEST_METHOD"]=="POST"){
+        ...
     }
-    else{
-        $name=test_input($_POST[name]){
-            if (!preg_match("/^[a-zA-Z-' ]*$/",$name)){
-                $nameErr="Only letters and white space allowed";
-            }
-        }
-    }
-
-    if(empty($_POST["age"])){
-        $ageErr = "Age is required";
-    }
-    else{
-        $age= test_input($_POST["age"]);
-        if(!is_numeric($age)){
-            $ageErr= "Age must be a number";
-        }
-        elseif($age>=100 || age<10){
-            $ageErr= "Must be betewee 10 to 100"
-        }
-    }
-
-    if(empty($_POST["email"])){
-        $emailErr="Email is required";
-    }
-    else{
-        $email = test_input($)
-    }
-
     ?>
+
+    <form method = "post" action="<?php echo $_SERVER[PHP_SELF];?>">
+        <label for="">Name: </label>
+        <input type="text" value="<?php echo $name;?>">
+        <span class="error">* <?php echo $nameErr;?> </span>
+    </form>
+
+    <?php if ($success) echo <"p class='success'>$success</p>"; ?>
+
     
 </body>
 </html>
