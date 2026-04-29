@@ -1,0 +1,20 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 50px;
+}
+.error {
+    color: red;
+    font-size: 0.9em;
+}
+.success {
+    color: green;
+    font-weight: bold;
+}
+input {
+    margin: 8px 0;
+    padding: 8px;
+    width: 320px;
+}
+label {
+    font-weight: bold;
+}
