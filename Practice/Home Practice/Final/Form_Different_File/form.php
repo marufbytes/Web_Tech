@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <title>Form validation</title>
     <link rel="stylesheet" href="style.css"> 

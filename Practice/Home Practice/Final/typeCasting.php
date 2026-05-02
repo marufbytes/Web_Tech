@@ -7,22 +7,23 @@
 <pre>
 <?php
 $a = 5;       // Integer
-$b = 5.34;    // Float
+$b = 5.99;    // Float
 $c = "25 km"; // String
 $d = "km 25"; // String
 $e = "hello"; // String
 $f = true;    // Boolean
 $g = NULL;    // NULL
 
-$a = (float) $a;
-$b = (float) $b;
+$a = (string) $a;
+$b = (int) $b;
 $c = (float) $c;
 $d = (float) $d;
 $e = (float) $e;
-$f = (float) $f;
+$f = (string) $f;
 $g = (float) $g;
 
-// Use var_dump() to verify the data type
+echo "<br>";
+
 var_dump($a);
 var_dump($b);
 var_dump($c);
@@ -30,6 +31,27 @@ var_dump($d);
 var_dump($e);
 var_dump($f);
 var_dump($g);
+
+echo "<br>";
+
+echo print_r($a, true) . "<br>";
+echo print_r($b, true) . "<br>";
+echo print_r($c, true) . "<br>";
+echo print_r($d, true) . "<br>";
+echo print_r($e, true) . "<br>";
+echo print_r($f, true) . "<br>";
+echo print_r($g, true) . "<br>";
+
+echo "<br>";
+
+echo($a)."<br>";
+echo($b)."<br>";
+echo($c)."<br>";
+echo($d)."<br>";
+echo($e)."<br>";
+echo($f)."<br>";
+echo($g)."<br>";
+
 ?> 
 </pre>
 
