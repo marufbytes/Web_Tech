@@ -22,9 +22,31 @@ if (empty($username)||empty($password)||empty($email))
         else
             {
                 $error= "Error" . $conn->error;
-            }    
+            }
+        
+    
         } 
+
+
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ?>
 
 <!DOCTYPE html>
