@@ -1,8 +1,7 @@
 <?php
 include "config.php";
 
-$success = "";
-$error = "";
+$success = $error = "";
 
 $id = $_GET["id"];
 
@@ -17,18 +16,20 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $department = $_POST["department"];
 
     if (empty($name) || empty($email) || empty($department)) {
-        $error = "Please fill all the fields.";
+        $error = "Please fill all the fields";
     } else {
+
         $sql = "UPDATE students 
                 SET name='$name', email='$email', department='$department'
                 WHERE id='$id'";
 
         if ($conn->query($sql) === TRUE) {
-            $success = "Student record updated successfully.";
+            $success = "Student record updated successfully";
 
             $sql = "SELECT * FROM students WHERE id='$id'";
             $result = $conn->query($sql);
             $row = $result->fetch_assoc();
+
         } else {
             $error = "Error: " . $conn->error;
         }
@@ -46,11 +47,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <h2>Edit Student Record</h2>
 
 <form method="post" action="">
-    Student Name: <input type="text" name="name" value="<?php echo $row['name']; ?>"><br><br>
+    Student Name: 
+    <input type="text" name="name" value="<?php echo $row['name']; ?>"><br><br>
 
-    Email: <input type="email" name="email" value="<?php echo $row['email']; ?>"><br><br>
+    Email: 
+    <input type="email" name="email" value="<?php echo $row['email']; ?>"><br><br>
 
-    Department: <input type="text" name="department" value="<?php echo $row['department']; ?>"><br><br>
+    Department: 
+    <input type="text" name="department" value="<?php echo $row['department']; ?>"><br><br>
 
     <input type="submit" value="Update Student">
 </form>

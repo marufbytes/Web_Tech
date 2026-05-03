@@ -1,8 +1,7 @@
 <?php
 include "config.php";
 
-$success = "";
-$error = "";
+$success = $error = "";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
@@ -12,13 +11,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $department = $_POST["department"];
 
     if (empty($name) || empty($email) || empty($registration_no) || empty($department)) {
-        $error = "Please fill all the fields.";
+        $error = "Please fill all the fields";
     } else {
-        $sql = "INSERT INTO students (name, email, registration_no, department)
+
+        $sql = "INSERT INTO students(name, email, registration_no, department)
                 VALUES ('$name', '$email', '$registration_no', '$department')";
 
         if ($conn->query($sql) === TRUE) {
-            $success = "Student record added successfully.";
+            $success = "Student record added successfully";
         } else {
             $error = "Error: " . $conn->error;
         }

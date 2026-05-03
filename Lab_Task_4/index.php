@@ -1,6 +1,8 @@
 <?php
 include "config.php";
 
+$success = $error = "";
+
 $sql = "SELECT * FROM students";
 $result = $conn->query($sql);
 ?>
@@ -12,10 +14,13 @@ $result = $conn->query($sql);
 </head>
 <body>
 
-<h1>Student Records</h1>
+<h2>Student Records</h2>
 
-<a href="add.php">Add student</a>
+<a href="add.php">Add New Student</a>
 <br><br>
+
+<p style="color:green;"><?php echo $success; ?></p>
+<p style="color:red;"><?php echo $error; ?></p>
 
 <table border="1" cellpadding="10" cellspacing="0">
     <tr>
@@ -28,7 +33,9 @@ $result = $conn->query($sql);
 
     <?php
     if ($result->num_rows > 0) {
+
         while ($row = $result->fetch_assoc()) {
+
             echo "<tr>";
             echo "<td>" . $row["name"] . "</td>";
             echo "<td>" . $row["email"] . "</td>";
@@ -40,6 +47,7 @@ $result = $conn->query($sql);
             echo "</td>";
             echo "</tr>";
         }
+
     } else {
         echo "<tr>";
         echo "<td colspan='5'>No student records found.</td>";
