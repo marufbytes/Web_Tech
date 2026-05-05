@@ -1,0 +1,23 @@
+#d1{
+    background-color: green; 
+    width: 300px; 
+    height: 200px;
+    /* margin: 10px 20px 30px 40px; */
+    /* margin-top: ;
+    margin-bottom: ; */
+    /* padding: 10px; */
+    position: relative;
+    
+
+}
+
+#d2{
+    background-color: red; 
+    width: 100px; 
+    height: 100px;
+    position: absolute;
+    left: 110px;
+    top:50px;
+    border-radius: 50%;
+    display: none;
+}
