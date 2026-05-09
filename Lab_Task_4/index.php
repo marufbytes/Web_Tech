@@ -19,9 +19,6 @@ $result = $conn->query($sql);
 <a href="add.php">Add New Student</a>
 <br><br>
 
-<p style="color:green;"><?php echo $success; ?></p>
-<p style="color:red;"><?php echo $error; ?></p>
-
 <table border="1" cellpadding="10" cellspacing="0">
     <tr>
         <th>Name</th>
