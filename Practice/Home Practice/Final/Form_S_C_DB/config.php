@@ -1,5 +1,4 @@
 // config.php
-r
 <?php
 $host = "localhost";
 $user = "root";
