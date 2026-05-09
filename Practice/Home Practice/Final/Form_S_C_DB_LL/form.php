@@ -161,9 +161,9 @@ Welcome:
 
 </form>
 
-<p style="color:green;"><?php echo $success; ?></p>
+<p><?php echo $success; ?></p>
 
-<p style="color:red;"><?php echo $error; ?></p>
+<p ><?php echo $error; ?></p>
 
 <a href="logout.php">Logout</a>
 

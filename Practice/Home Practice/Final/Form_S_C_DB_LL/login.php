@@ -72,7 +72,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 </form>
 
-<p style="color:red;"><?php echo $error; ?></p>
+<p>
+    <?php echo $error; ?>
+</p>
 
 <a href="register.php">New User? Register Here</a>
 
