@@ -27,7 +27,7 @@
 
 </form>
 
-<p style="color:red;"><?php echo $error; ?></p>
+<p><?php echo $error; ?></p>
 
 <a href="../controller/register-controller.php">Register</a>
 
